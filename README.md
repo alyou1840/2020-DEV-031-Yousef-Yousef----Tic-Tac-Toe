@@ -16,6 +16,8 @@ If a player is able to draw three X’s or three O’s in a row, that player win
 If all nine squares are filled and neither player has three in a row, the game is a draw.
 
 ## Run Application
+Make sure to have all necessary dependecies (folder: node_modules)
+
 In the project directory, you can run:
 
 ```bash
