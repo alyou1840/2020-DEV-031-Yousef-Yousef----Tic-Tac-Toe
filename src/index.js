@@ -51,17 +51,17 @@ function Square(props) {
     render() {
       const winner = calculateWinner(this.state.squares);
       let status;
-      if(this.state.squares.includes(null) === false)
-      {
-        status= 'DRAW';
-      }
-      else
-      {
-        if (winner) {
-          status = 'Winner: ' + winner;
-        } else {
+      if (winner) {
+        status = 'Winner: ' + winner;
+      } 
+      else {
+        if(this.state.squares.includes(null) === false){
+          status= 'DRAW';
+        }
+        else{
           status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
         }
+        
       }
       return (
         <div>
@@ -81,8 +81,8 @@ function Square(props) {
             {this.renderSquare(7)}
             {this.renderSquare(8)}
           </div>
-          <div className="control">
-          <button onClick={() => this.restartGame()}>Restart</button>
+          <div className="action-control">
+            <button className="restart" onClick={() => this.restartGame()}>Restart</button>
           </div>
         </div>
       );
